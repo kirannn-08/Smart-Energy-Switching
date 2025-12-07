@@ -169,16 +169,17 @@ class Battery:
 
 def run_daily_sim_with_battery(
     date,
-    step_minutes: int = 1,
-    pv_peak_kw: float = 1.0,
-    battery_capacity_kwh: float = 2.0,
-    battery_initial_soc_ratio: float = 0.5,
-    battery_max_charge_kw: float = 0.8,
-    battery_max_discharge_kw: float = 0.8,
-    battery_reserve_ratio: float = 0.4,  # keep 40% as backup
-    output_csv_path: str = "data/daily_sim_with_battery.csv",
+    step_minutes=1,
+    pv_peak_kw=1.0,
+    battery_capacity_kwh=2.0,
+    battery_initial_soc_ratio=0.5,
+    battery_max_charge_kw=0.8,
+    battery_max_discharge_kw=0.8,
+    battery_reserve_ratio=0.4,
+    custom_pv_function=None,
+    output_csv_path="data/daily_sim_with_battery.csv",
 ):
-
+    
     """
     24-hour simulation with battery-aware energy flows.
 
