@@ -15,7 +15,7 @@ def simulate_kitchen_power(step: int) -> float:
     Simulate kitchen circuit power [kW].
 
     - Most of the time: ~0.2 kW (lights, small loads)
-    - For a short window (e.g., steps 5–8): ~1.2 kW (mixer ON)
+    - For a short window (e.g., steps 5-8): ~1.2 kW (mixer ON)
     """
     if 5 <= step <= 8:
         return 1.2  # mixer ON
